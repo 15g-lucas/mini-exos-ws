@@ -1,0 +1,76 @@
+#root{
+    margin: 20px;
+}
+
+.dashboard{
+    width: 60%;
+}
+
+.grid{
+    display: grid;
+    /*grid-auto-rows: 125px;*/
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+            'A1 A2'
+            'A1 A2'
+            'A1 A3'
+            'A4 A3'
+;
+}
+
+.second_grid{
+    display: grid;
+    margin-top: 20px;
+    grid-auto-rows: 300px;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.el1{ grid-area: A1 }
+.el2{ grid-area: A2 }
+.el3{ grid-area: A3 }
+.el4{ grid-area: A4 }
+
+.grid>div, .second_grid>div{
+    text-align: center;
+    background: rgba(14, 83, 225, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 35px;
+    color: white;
+}
+
+.chat{
+    padding: 20px;
+    margin-left: 2%;
+    width: 40%;
+    border-radius: 15px;
+    background: #dcdcdc;
+    position: relative;
+}
+
+.chat__input{
+    width: 93%;
+    position: absolute;
+    bottom: 10px;
+}
+
+.el1{
+    font-size: 100px !important;
+}
+
+.response, .prompt{
+    padding: 10px;
+    width: 70%;
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 15px;
+}
+
+.prompt{
+    margin-left: 30%;
+}
